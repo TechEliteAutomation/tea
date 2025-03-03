@@ -29,6 +29,16 @@
       background: linear-gradient(135deg, #0d1b2a, #1b263b);
       box-shadow: 0 0 30px rgba(0, 170, 255, 0.5);
     }
+    .logo-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px; /* Adjust spacing between logo and text */
+    }
+    .logo-container img {
+      max-width: 100%;
+      height: auto;
+    }
     h1 {
       font-size: 2.8rem;
       font-weight: 700;
@@ -39,40 +49,18 @@
       font-weight: 400;
       color: #00aaff;
     }
-    h3 {
-      font-size: 1.2rem;
-      margin-top: 10px;
-      font-weight: 400;
-      color: #cccccc;
-    }
     p {
       font-size: 1.1rem;
       margin-top: 20px;
       opacity: 0.8;
     }
-    .cta {
-      margin-top: 30px;
-    }
-    .cta a {
-      display: inline-block;
-      padding: 12px 24px;
-      font-size: 1rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      color: #ffffff;
-      background: #00aaff;
-      border-radius: 6px;
-      text-decoration: none;
-      transition: 0.3s;
-    }
-    .cta a:hover {
-      background: #0088cc;
-    }
   </style>
 </head>
 <body>
   <div class="container">
-    <img src="/assets/images/logo.png" alt="Tech Elite Automation Logo - Expert in Business Automation, IT Consulting, and Optimization Solutions">
+    <div class="logo-container">
+      <img src="/assets/images/logo.png" alt="Tech Elite Automation Logo">
+    </div>
     <h1>TACMS</h1>
     <h2>The Autonomous Content Monetization System</h2>
     <p>Coming Soon</p>
