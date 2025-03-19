@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Elite Automation | Independent IT Consulting</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #000;
+            color: #00aaff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        /* Header */
+        header {
+            padding: 20px 0;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 5px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            opacity: 0.8;
+        }
+
+        /* Sections */
+        section {
+            max-width: 700px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        li {
+            margin: 10px 0;
+            font-size: 1.1rem;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            background-color: #111;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 170, 255, 0.3);
+        }
+
+        input, textarea, button {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        input, textarea {
+            background: #222;
+            color: #00aaff;
+        }
+
+        button {
+            background-color: #00aaff;
+            color: #000;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background-color: #0088cc;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 30px;
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+    </style>
+
+    <!-- Include EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("uqKcGwCeZJee7dzx6"); // Replace with your Public Key from EmailJS
+        })();
+
+        function sendEmail(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            const form = event.target;
+
+            emailjs.sendForm("service_bhkdkit", "template_kdtx9s5", form)
+                .then(function(response) {
+                    alert("Message sent successfully!");
+                }, function(error) {
+                    alert("Failed to send message: " + error.text);
+                });
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Tech Elite Automation Logo" class="logo">
+        <p>IT & AI Consulting | Full-Stack Development | Web & Graphic Design</p>
+    </header>
+    
+    <section id="contact">
+        <h2>Schedule Your Free Consultation Today</h2>
+        <div class="contact-form">
+            <form onsubmit="sendEmail(event)">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Tech Elite Automation. All rights reserved.</p>
+    </footer>
+</body>
+</html>
