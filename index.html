@@ -76,12 +76,15 @@
         }
 
         .logo {
-			height: 100px; /* Increased from 60px */
+			max-height: 80px; /* Target size */
+			height: auto; /* Allow proportional scaling */
+			width: auto; /* Allow proportional scaling */
+			max-width: 90vw; /* Prevent overflow on small screens */
 			margin-bottom: 1rem;
 			filter: drop-shadow(0 0 8px rgba(0, 170, 255, 0.4));
 			transition: transform 0.3s ease, filter 0.3s ease;
 		}
-
+		
         .logo:hover {
             transform: scale(1.05);
             filter: drop-shadow(0 0 12px rgba(0, 170, 255, 0.6));
