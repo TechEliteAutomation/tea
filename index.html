@@ -3,30 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Tech Elite Automation: Expert IT consulting, AI automation, and full-stack development solutions tailored for businesses and individuals.">
-    <meta name="keywords" content="IT consulting, AI automation, full-stack development, web design, tech solutions">
+    <meta name="description" content="Tech Elite Automation delivers enterprise-grade IT consulting, AI-powered automation, and full-stack development solutions with maximum performance and precision.">
+    <meta name="keywords" content="IT consulting, AI automation, enterprise solutions, high-performance development, tech optimization, professional IT services">
     <meta name="author" content="Tech Elite Automation">
-    <meta property="og:title" content="Tech Elite Automation | IT Consulting & AI Solutions">
-    <meta property="og:description" content="Expert IT consulting, AI-driven automation, and web development solutions.">
+    <meta property="og:title" content="Tech Elite Automation | Enterprise-Grade IT Solutions">
+    <meta property="og:description" content="Maximum-performance IT consulting, AI-driven automation, and enterprise development solutions.">
     <meta property="og:image" content="logo.png">
     <meta property="og:url" content="https://techeliteautomation.com">
+    <meta property="og:type" content="website">
     <meta name="robots" content="index, follow">
+    <meta name="x:card" content="summary_large_image">
+    <link rel="canonical" href="https://techeliteautomation.com">
     
-    <title>Tech Elite Automation | IT Consulting & AI Solutions</title>
+    <title>Tech Elite Automation | Enterprise-Grade IT Solutions</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     
     <style>
         :root {
-            --primary-color: #0af;
-            --primary-hover: #08e;
-            --bg-color: #111;
+            --primary-color: #0088cc;
+            --primary-hover: #006699;
+            --accent-color: #00ccff;
+            --bg-color: #0a0a0a;
             --bg-darker: #050505;
-            --bg-lighter: #1a1a1a;
-            --text-color: #f8f8f8;
-            --text-secondary: rgba(248, 248, 248, 0.7);
+            --bg-lighter: #151515;
+            --text-color: #f0f0f0;
+            --text-secondary: rgba(240, 240, 240, 0.7);
         }
 
         * { 
@@ -37,7 +41,7 @@
 
         body { 
             color: var(--text-color); 
-            font-family: 'JetBrains Mono', monospace;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             line-height: 1.6;
             min-height: 100vh;
             display: flex;
@@ -61,63 +65,63 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.7);
+            background: rgba(0, 0, 0, 0.75);
             z-index: -1;
         }
 
         header {
             padding: 4vh 5vw;
-            background: rgba(5, 5, 5, 0.7);
-            border-bottom: 1px solid rgba(0, 170, 255, 0.2);
+            background: rgba(5, 5, 5, 0.8);
+            border-bottom: 1px solid rgba(0, 136, 204, 0.25);
             display: flex;
             flex-direction: column;
             align-items: center;
-            backdrop-filter: blur(5px);
+            backdrop-filter: blur(8px);
         }
 
         .logo {
-			max-height: 80px; /* Target size */
-			height: auto; /* Allow proportional scaling */
-			width: auto; /* Allow proportional scaling */
-			max-width: 90vw; /* Prevent overflow on small screens */
-			margin-bottom: 1rem;
-			filter: drop-shadow(0 0 8px rgba(0, 170, 255, 0.4));
-			transition: transform 0.3s ease, filter 0.3s ease;
-		}
-		
+            max-height: 70px;
+            height: auto;
+            width: auto;
+            max-width: 90vw;
+            margin-bottom: 1rem;
+            filter: drop-shadow(0 0 8px rgba(0, 136, 204, 0.4));
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+        
         .logo:hover {
             transform: scale(1.05);
-            filter: drop-shadow(0 0 12px rgba(0, 170, 255, 0.6));
+            filter: drop-shadow(0 0 12px rgba(0, 136, 204, 0.6));
         }
 
         h1 {
-			font-size: clamp(1.2rem, 4vw, 1.8rem); /* Reduced from 1.5rem, 5vw, 2.5rem */
-			font-weight: 700;
-			margin-bottom: 0.5rem;
-			background: linear-gradient(120deg, #0af, #08f);
-			-webkit-background-clip: text;
-			background-clip: text;
-			color: transparent;
-			letter-spacing: -0.5px;
-		}
+            font-size: clamp(1.3rem, 4vw, 1.9rem);
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            background: linear-gradient(120deg, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: -0.5px;
+        }
 
         h2 {
-            font-size: clamp(1.2rem, 4vw, 1.8rem);
+            font-size: clamp(1.2rem, 3.5vw, 1.8rem);
             margin-bottom: 1.5rem;
             color: var(--primary-color);
-            font-weight: 400;
+            font-weight: 500;
         }
 
         p {
-            font-size: clamp(0.9rem, 3vw, 1.1rem);
-            opacity: 0.9;
-            max-width: 40em;
+            font-size: clamp(0.95rem, 2.8vw, 1.1rem);
+            opacity: 0.95;
+            max-width: 42em;
             margin: 0 auto;
         }
 
         main {
             flex: 1;
-            padding: 2vh 5vw;
+            padding: 3vh 5vw;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -128,24 +132,26 @@
         section {
             width: 100%;
             max-width: 600px;
-            padding: 3vh 5vw;
+            padding: 3vh 4vw;
         }
 
         .services {
             display: flex;
             justify-content: center;
-            gap: 1rem;
-            margin: 1rem 0;
+            gap: 1.25rem;
+            margin: 1.25rem 0;
             flex-wrap: wrap;
         }
 
         .service {
-			color: var(--primary-color);
-			font-size: 1.1rem; /* Increased from 0.9rem */
-			letter-spacing: 1px;
-			transition: transform 0.2s ease, color 0.2s ease;
-			cursor: default;
-		}
+            color: var(--accent-color);
+            font-size: 1.05rem;
+            font-family: 'JetBrains Mono', monospace;
+            letter-spacing: 0.5px;
+            transition: transform 0.2s ease, color 0.2s ease;
+            cursor: default;
+            font-weight: 400;
+        }
 
         .service:hover {
             transform: translateY(-2px);
@@ -153,11 +159,11 @@
         }
 
         .contact-form {
-            background: rgba(26, 26, 26, 0.8);
-            padding: 2rem;
-            border-radius: 8px;
+            background: rgba(21, 21, 21, 0.85);
+            padding: 2.25rem;
+            border-radius: 6px;
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3), 
-                        0 0 1px 1px rgba(0, 170, 255, 0.1);
+                        0 0 1px 1px rgba(0, 136, 204, 0.15);
             position: relative;
             overflow: hidden;
             backdrop-filter: blur(10px);
@@ -176,36 +182,37 @@
         input, textarea, button {
             width: 100%;
             padding: 1rem;
-            margin: 0.5rem 0;
+            margin: 0.6rem 0;
             border: none;
             border-radius: 4px;
-            font-family: 'JetBrains Mono', monospace;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             font-size: clamp(0.9rem, 2vw, 1rem);
             transition: all 0.2s ease;
         }
 
         input, textarea {
-            background: rgba(30, 30, 30, 0.9);
+            background: rgba(25, 25, 25, 0.95);
             color: var(--text-color);
-            border: 1px solid rgba(0, 170, 255, 0.2);
+            border: 1px solid rgba(0, 136, 204, 0.2);
         }
 
         input:focus, textarea:focus {
             outline: none;
             border-color: var(--primary-color);
-            box-shadow: 0 0 0 2px rgba(0, 170, 255, 0.2);
+            box-shadow: 0 0 0 2px rgba(0, 136, 204, 0.2);
         }
 
         button {
             background: var(--primary-color);
-            color: var(--bg-darker);
-            font-weight: 700;
+            color: white;
+            font-weight: 600;
             cursor: pointer;
             letter-spacing: 1px;
-            margin-top: 1rem;
+            margin-top: 1.25rem;
             position: relative;
             overflow: hidden;
             z-index: 1;
+            text-transform: uppercase;
         }
 
         button::before {
@@ -225,32 +232,32 @@
         }
 
         footer {
-            padding: 2vh 5vw;
-            font-size: 0.8rem;
+            padding: 1.75vh 5vw;
+            font-size: 0.85rem;
             color: var(--text-secondary);
             text-align: center;
-            background: rgba(5, 5, 5, 0.7);
-            border-top: 1px solid rgba(0, 170, 255, 0.2);
-            backdrop-filter: blur(5px);
+            background: rgba(5, 5, 5, 0.8);
+            border-top: 1px solid rgba(0, 136, 204, 0.25);
+            backdrop-filter: blur(8px);
         }
 
         @media (max-width: 600px) {
             .contact-form {
-                padding: 1.5rem;
+                padding: 1.75rem;
             }
         }
 
         /* Subtle animations */
         @keyframes pulse {
-            0% { opacity: 0.8; }
+            0% { opacity: 0.85; }
             50% { opacity: 1; }
-            100% { opacity: 0.8; }
+            100% { opacity: 0.85; }
         }
 
         .highlight {
             position: relative;
             display: inline-block;
-            color: var(--primary-color);
+            color: var(--accent-color);
             animation: pulse 4s infinite;
             font-weight: 700;
         }
@@ -302,28 +309,50 @@
             });
         });
     </script>
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Tech Elite Automation",
+      "description": "Enterprise-grade IT consulting, AI automation, and full-stack development solutions with maximum performance and precision.",
+      "url": "https://techeliteautomation.com",
+      "logo": "https://techeliteautomation.com/logo.png",
+      "image": "https://techeliteautomation.com/background.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "US"
+      },
+      "priceRange": "$$",
+      "telephone": "",
+      "email": "",
+      "serviceType": ["IT Consulting", "AI Automation", "Full-Stack Development", "Enterprise IT Solutions"],
+      "sameAs": []
+    }
+    </script>
 </head>
 <body>
     <header>
         <img src="logo.png" alt="Tech Elite Automation Logo" class="logo">
-        <h1>Maximum-Performance, Precision IT Solutions</h1>
+        <h1>Enterprise-Grade IT Infrastructure & Solutions</h1>
         <div class="services">
-            <span class="service">IT Consulting</span>
-            <span class="service">AI Automation</span>
-            <span class="service">Full-Stack Development</span>
-            <span class="service">Web & Graphic Design</span>
+            <span class="service">IT Infrastructure</span>
+            <span class="service">AI Solutions</span>
+            <span class="service">Performance Optimization</span>
+            <span class="service">Enterprise Architecture</span>
         </div>
     </header>
     
     <main>
         <section id="contact">
-            <h2>Contact Us for Your <span class="highlight">Free</span> Consultation</h2>
+            <h2>Schedule Your <span class="highlight">Complimentary</span> Technical Assessment</h2>
             <div class="contact-form">
                 <form>
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
-                    <button type="submit">SEND MESSAGE</button>
+                    <input type="text" name="name" placeholder="Full Name" required aria-label="Full Name">
+                    <input type="email" name="email" placeholder="Business Email" required aria-label="Business Email">
+                    <textarea name="message" placeholder="Project Requirements" rows="4" required aria-label="Project Requirements"></textarea>
+                    <button type="submit">Request Consultation</button>
                 </form>
             </div>
         </section>
