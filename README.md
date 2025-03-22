@@ -1,4 +1,4 @@
-# TechEliteAutomation - `tea` Repository
+# [TechEliteAutomation.com](https://techeliteautomation.com) - `tea` Repository
 
 This repository contains the source files for the TechEliteAutomation.com website.
 
