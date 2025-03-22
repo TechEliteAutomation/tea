@@ -261,7 +261,47 @@
             animation: pulse 4s infinite;
             font-weight: 700;
         }
-    </style>
+        
+    
+		footer {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 1rem;
+		}
+    
+		.footer-socials {
+			display: flex;
+			gap: 1rem;
+			margin-bottom: 0.5rem;
+		}
+    
+		.footer-social-button {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 36px;
+			height: 36px;
+			border-radius: 50%;
+			background: rgba(0, 136, 204, 0.1);
+			transition: all 0.3s ease;
+			border: 1px solid rgba(0, 136, 204, 0.2);
+		}
+    
+		.footer-social-button:hover {
+			background: var(--primary-color);
+			transform: translateY(-2px);
+		}
+    
+		.footer-social-icon {
+			color: var(--text-secondary);
+			transition: color 0.3s ease;
+		}
+    
+		.footer-social-button:hover .footer-social-icon {
+			color: white;
+		}
+	</style>
 
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script>
