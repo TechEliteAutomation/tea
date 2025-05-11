@@ -1,0 +1,9 @@
+# START OF FILE: robots.txt
+User-agent: *
+Allow: /
+Disallow: /css/
+Disallow: /js/
+Disallow: /assets/icons/ # No need to crawl individual icons if they are just decorative
+
+Sitemap: https://techeliteautomation.com/sitemap.xml
+# END OF FILE: robots.txt

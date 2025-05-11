@@ -1,0 +1,12 @@
+<!-- START OF FILE: assets/icons/icon-ai.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="48px" height="48px">
+  <path d="M0 0h24v24H0z" fill="none"/>
+  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+  <path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0 8c-1.65 0-3-1.35-3-3s1.35-3 3-3 3 1.35 3 3-1.35 3-3 3z"/>
+  <circle cx="12" cy="4.5" r="1.5"/>
+  <circle cx="12" cy="19.5" r="1.5"/>
+  <circle cx="4.5" cy="12" r="1.5"/>
+  <circle cx="19.5" cy="12" r="1.5"/>
+  <path d="M12 10c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m0-2c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4z"/>
+</svg>
+<!-- END OF FILE: assets/icons/icon-ai.svg -->

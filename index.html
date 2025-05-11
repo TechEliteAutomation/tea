@@ -1,161 +1,234 @@
+<!-- START OF FILE: index.html (Homepage) -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tech Elite Automation - Under Maintenance</title>
-    <style>
-        /* --- CSS Variables for Theming --- */
-        :root {
-            --bg-color: #0a0f1a; /* Dark blue-ish black */
-            --container-bg: #161d2b; /* Slightly lighter dark blue */
-            --text-color: #e0e0e0; /* Light grey for main text */
-            --text-muted: #8899a6; /* Muted grey for footer/secondary text */
-            --accent-color: #00aeff; /* Bright, high-tech blue */
-            --accent-hover: #007fcc; /* Darker blue for hover */
-            --border-color: #38444d; /* Subtle border color */
-            --loader-bg: #333;
+    <!-- CSP (Content Security Policy) - Adjust as needed -->
+    <meta http-equiv="Content-Security-Policy" content="
+        default-src 'self'; 
+        script-src 'self' https://cdn.emailjs.com https://www.googletagmanager.com; 
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; 
+        img-src 'self' data:; 
+        font-src 'self' https://fonts.gstatic.com;
+        connect-src 'self' https://api.emailjs.com https://www.google-analytics.com;
+        form-action 'self'; 
+        frame-ancestors 'none'; 
+        base-uri 'self';
+        object-src 'none';">
 
-            --font-primary: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-        }
+    <title>Tech Elite Automation | Expert AI, DevOps & Full-Stack Solutions</title>
+    <meta name="description" content="Tech Elite Automation delivers high-impact AI solutions, robust IT infrastructure, and custom full-stack development to optimize your business operations and drive growth.">
+    <meta name="keywords" content="AI solutions, IT infrastructure, full-stack development, DevOps, automation, cloud optimization, data processing, tech elite automation">
+    <meta name="author" content="Tech Elite Automation">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://techeliteautomation.com/" />
 
-        html {
-            height: 100%; /* Ensure html takes full height */
-        }
+    <meta property="og:title" content="Tech Elite Automation | Expert AI & IT Solutions">
+    <meta property="og:description" content="Transform your business with Tech Elite Automation's expert AI, DevOps, and full-stack development services.">
+    <meta property="og:image" content="https://techeliteautomation.com/assets/images/techelite-og-logo.png">
+    <meta property="og:url" content="https://techeliteautomation.com/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
 
-        body {
-            font-family: var(--font-primary);
-            background-color: var(--bg-color); /* Fallback color if image fails */
-            color: var(--text-color);
-            text-align: center;
-            margin: 0; /* Remove default body margin */
-            padding: 30px; /* Add some padding around the edges */
-            box-sizing: border-box; /* Include padding in height calculation */
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
 
-            /* === Background Image Settings === */
-            background-image: url('background.jpg'); /* Path to your image */
-            background-size: cover;           /* Scale image to cover the entire viewport */
-            background-position: center center; /* Center the image */
-            background-repeat: no-repeat;      /* Do not tile the image */
-            background-attachment: fixed;       /* Keep background fixed during scroll */
-            /* === End Background Image Settings === */
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Google Fonts with SRI (Generate actual hashes) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" 
+          integrity="sha384-PLACEHOLDER_FONT_HASH" crossorigin="anonymous"> 
+    
+    <link rel="stylesheet" href="/css/style.css">
 
-            /* Flexbox for vertical alignment and footer placement */
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh; /* Ensure body takes at least full viewport height */
-        }
-
-        /* --- Main Content Container --- */
-        .container {
-            max-width: 600px;
-            width: 90%; /* Make it slightly responsive on smaller screens */
-            margin: auto; /* Centers horizontally and pushes footer down with flex */
-            padding: 30px 40px; /* More padding */
-            border: 1px solid var(--border-color);
-            border-radius: 12px; /* Slightly larger radius */
-            background-color: rgba(22, 29, 43, 0.9); /* Use var(--container-bg) with alpha for slight transparency */
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow */
-        }
-
-        .logo {
-            max-width: 80%; /* Control max size relative to container */
-            height: auto;
-            display: block;
-            margin: 0 auto 25px; /* Center and add space below */
-        }
-
-        /* --- Typography --- */
-        h1 { /* Added this back in case the logo doesn't contain the name */
-            font-size: 28px;
-            font-weight: 600;
-            margin-top: 0;
-            margin-bottom: 15px;
-            color: var(--text-color);
-        }
-
-        .container p {
-            font-size: 17px;
-            line-height: 1.6;
-            margin-bottom: 25px;
-            color: var(--text-color);
-        }
-
-        /* --- Loader Animation --- */
-        .loader {
-            border: 4px solid var(--loader-bg);
-            border-top: 4px solid var(--accent-color); /* Use accent color */
-            border-radius: 50%;
-            width: 45px;
-            height: 45px;
-            animation: spin 1.2s linear infinite;
-            display: inline-block;
-            margin-top: 10px; /* Adjusted spacing */
-        }
-
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        /* --- Footer --- */
-        footer {
-            width: 100%;
-            margin-top: auto; /* Pushes footer to bottom when using flex column */
-            padding: 20px 0; /* Vertical padding */
-            /* Optional: Add a subtle background to footer if needed over complex background */
-            /* background-color: rgba(10, 15, 26, 0.7); */
-        }
-
-        footer p {
-            font-size: 12px;
-            color: var(--text-muted);
-            margin: 0; /* Reset margins for footer p */
-            line-height: 1.5;
-        }
-
-        .footer-socials {
-            margin-bottom: 10px; /* Space between icon and text */
-        }
-
-        .footer-social-button {
-            display: inline-block;
-            transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out; /* Smooth transition */
-            opacity: 0.8; /* Slightly faded */
-        }
-
-        .footer-social-button:hover,
-        .footer-social-button:focus {
-            opacity: 1; /* Full opacity on hover/focus */
-            transform: scale(1.1); /* Slightly enlarge icon */
-            outline: none; /* Remove default focus outline if needed */
-        }
-
-        .footer-social-icon {
-            vertical-align: middle;
-            /* If the SVG isn't white/light, you might need this: */
-            /* filter: brightness(0) invert(1); */
-        }
-
-    </style>
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Tech Elite Automation",
+      "url": "https://techeliteautomation.com",
+      "logo": "https://techeliteautomation.com/assets/images/techelite-logo.png",
+      "description": "Expert provider of AI-driven solutions, IT infrastructure optimization, and full-stack development.",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "contact@techeliteautomation.com",
+        "contactType": "Sales & Technical Inquiries"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://techeliteautomation.com/services.html?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      },
+      "sameAs": [
+        "https://github.com/TechEliteAutomation" // Replace with actual company GitHub if different
+      ]
+    }
+    </script>
+    <!-- Google Analytics (Replace G-YOUR_GA_ID with your actual ID) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YOUR_GA_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-YOUR_GA_ID');
+    </script>
 </head>
 <body>
-    <!-- Main Content Area -->
-    <div class="container">
-        <img src="logo1.png" alt="Tech Elite Automation Logo" class="logo">
-        <p>We're currently deploying exciting new upgrades to enhance our platform. Service will resume shortly.</p>
-        <div class="loader"></div>
-    </div>
-
-    <!-- Footer -->
-    <footer>
-        <div class="footer-socials">
-            <a href="https://github.com/TechEliteAutomation" target="_blank" rel="noopener" class="footer-social-button" aria-label="GitHub Profile">
-                <!-- Assuming logog.svg is designed to look good on dark backgrounds -->
-                <img src="logog.svg" alt="GitHub Logo" class="footer-social-icon" width="25" height="25">
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="/" class="navbar-logo-link" aria-label="Tech Elite Automation Homepage">
+                <img src="/assets/images/techelite-logo.png" alt="Tech Elite Automation Logo" class="navbar-logo">
             </a>
+            <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+                <span class="menu-icon-bar"></span>
+                <span class="menu-icon-bar"></span>
+                <span class="menu-icon-bar"></span>
+            </button>
+            <nav class="nav-menu-container" id="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="/" class="nav-link active">Home</a></li>
+                    <li><a href="/about.html" class="nav-link">About</a></li>
+                    <li><a href="/services.html" class="nav-link">Services</a></li>
+                    <li><a href="/portfolio.html" class="nav-link">Portfolio</a></li>
+                    <li><a href="/security-practices.html" class="nav-link">Security</a></li>
+                    <li><a href="/contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="/contact.html" class="nav-cta btn btn-primary">Get Quote</a>
         </div>
-        <p>© 2025 TechEliteAutomation.com. All rights reserved.</p>
+    </header>
+
+    <main>
+        <section id="hero" class="hero-section full-height-section text-center">
+            <div class="hero-content">
+                <h1 class="hero-title">Elite AI & Automation for <span class="highlight">Peak Performance</span></h1>
+                <p class="hero-subtitle lead">Tech Elite Automation architects and deploys robust, scalable IT infrastructures and intelligent software solutions to dramatically optimize your processes and enhance operational efficiency.</p>
+                <div class="hero-cta-group">
+                    <a href="/services.html" class="btn btn-primary btn-lg">Explore Solutions</a>
+                    <a href="/contact.html" class="btn btn-secondary btn-lg">Request Consultation</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="intro-about" class="content-section text-center">
+            <div class="container">
+                <h2 class="section-title">Transforming Businesses with <span class="highlight">Intelligent Technology</span></h2>
+                <p class="section-intro">Tech Elite Automation is your partner in navigating the complexities of modern IT. We leverage over 15 years of collective field experience in AI, DevOps, and full-stack development to deliver solutions that are not just technologically advanced, but also strategically aligned with your business objectives for tangible, measurable results.</p>
+            </div>
+        </section>
+
+        <section id="core-services" class="content-section alt-bg">
+            <div class="container text-center">
+                <h2 class="section-title">Our Core Expertise</h2>
+                <div class="services-grid homepage-services">
+                    <div class="service-card">
+                        <img src="/assets/icons/icon-ai.svg" alt="AI and Automation Icon" class="service-card-icon">
+                        <h3 class="service-card-title">AI & Intelligent Automation</h3>
+                        <p class="service-card-description">Leveraging Google Gemini, local LLMs, and custom scripting (Python, Bash, Java) to automate complex tasks, extract insights, and optimize workflows.</p>
+                        <a href="/services/ai-automation.html" class="btn btn-link">Learn More →</a>
+                    </div>
+                    <div class="service-card">
+                        <img src="/assets/icons/icon-devops-cloud.svg" alt="DevOps and Cloud Icon" class="service-card-icon">
+                        <h3 class="service-card-title">DevOps & IT Infrastructure</h3>
+                        <p class="service-card-description">Optimizing cloud and on-premises environments, implementing Infrastructure-as-Code, robust network security, and proactive system monitoring.</p>
+                        <a href="/services/devops-infrastructure.html" class="btn btn-link">Learn More →</a>
+                    </div>
+                    <div class="service-card">
+                        <img src="/assets/icons/icon-full-stack.svg" alt="Full-Stack Development Icon" class="service-card-icon">
+                        <h3 class="service-card-title">Full-Stack & Data Engineering</h3>
+                        <p class="service-card-description">Developing responsive, SEO-optimized web applications, automating data pipelines, enhancing EDI systems, and implementing rigorous QA frameworks.</p>
+                        <a href="/services/full-stack-data.html" class="btn btn-link">Learn More →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="proven-results" class="content-section text-center">
+            <div class="container">
+                <h2 class="section-title">Delivering <span class="highlight">Measurable Impact</span></h2>
+                <p class="section-intro">Our solutions are designed to produce quantifiable improvements for your business.</p>
+                <div class="results-showcase">
+                     <div class="result-card">
+                        <img src="/assets/icons/icon-efficiency.svg" alt="Efficiency Icon" class="result-card-icon">
+                        <h4 class="result-card-metric"><span class="highlight">30%</span> Gain</h4>
+                        <p class="result-card-description">In operational efficiency through AI-driven automation & optimized data processing.</p>
+                    </div>
+                    <div class="result-card">
+                        <h4 class="result-card-metric"><span class="highlight">25%</span> Reduction</h4>
+                        <p class="result-card-description">In operational costs by refining cloud & on-premises infrastructure resources.</p>
+                    </div>
+                    <div class="result-card">
+                        <h4 class="result-card-metric"><span class="highlight">75%</span> Increase</h4>
+                        <p class="result-card-description">In processing throughput via automated Excel solutions & dynamic EDI enhancements.</p>
+                    </div>
+                    <div class="result-card">
+                        <img src="/assets/icons/icon-secure.svg" alt="Security Icon" class="result-card-icon">
+                        <h4 class="result-card-metric"><span class="highlight">100%</span> Detection</h4>
+                        <p class="result-card-description">In specific error categories with implemented probabilistic QA testing frameworks.</p>
+                    </div>
+                </div>
+                <a href="/portfolio.html" class="btn btn-secondary mt-3">View Portfolio Details</a>
+            </div>
+        </section>
+
+        <section id="cta-banner" class="cta-banner-section alt-bg text-center">
+            <div class="container">
+                <h2 class="cta-title">Ready to Elevate Your Technology?</h2>
+                <p class="cta-text">Let's discuss how Tech Elite Automation can architect the perfect solution to meet your strategic objectives and overcome your technical challenges.</p>
+                <a href="/contact.html" class="btn btn-primary btn-lg">Schedule Your Free Consultation</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <img src="/assets/images/techelite-logo.png" alt="Tech Elite Automation Logo" class="footer-logo">
+                    <p>Driving innovation with expert AI, DevOps, and full-stack solutions.</p>
+                    <p class="footer-note">This site will transition to axiom.dev in the near future.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="/about.html">About Us</a></li>
+                        <li><a href="/services.html">Our Services</a></li>
+                        <li><a href="/portfolio.html">Case Studies</a></li>
+                        <li><a href="/security-practices.html">Security</a></li>
+                        <li><a href="/contact.html">Contact Us</a></li>
+                        <li><a href="/legal/privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="/legal/terms-of-service.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Get In Touch</h4>
+                    <p>Email: <a href="mailto:contact@techeliteautomation.com">contact@techeliteautomation.com</a></p>
+                    <!-- Optional: Phone -->
+                    <div class="footer-socials">
+                        <a href="https://github.com/TechEliteAutomation" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="GitHub Profile">
+                            <img src="/assets/images/github-icon.svg" alt="GitHub" class="social-icon">
+                        </a>
+                        <!-- Add other social links if any -->
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© <span id="current-year"></span> TechEliteAutomation.com. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
+
+    <!-- EmailJS Script with SRI (Generate actual hash) -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js" 
+            integrity="sha384-PLACEHOLDER_EMAILJS_HASH" crossorigin="anonymous"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/contact-form.js"></script> 
 </body>
 </html>
+<!-- END OF FILE: index.html -->

@@ -1,0 +1,117 @@
+<!-- START OF FILE: maintenance.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Elite Automation - Under Maintenance</title>
+    <!-- Minimal styles directly embedded for maintenance page -->
+    <style>
+        :root {
+            --color-primary: #00aeff;
+            --color-bg: #0a0f1a;
+            --color-bg-card: rgba(22, 29, 43, 0.95);
+            --color-text: #e0e0e0;
+            --color-text-secondary: #8899a6;
+            --color-border: #38444d;
+            --font-primary: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            --border-radius-lg: 12px;
+        }
+        html { height: 100%; }
+        body {
+            font-family: var(--font-primary);
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            text-align: center;
+            margin: 0;
+            padding: 30px;
+            box-sizing: border-box;
+            background-image: url('/assets/images/hero-background.jpg'); /* Updated Path */
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 600px;
+            width: 90%;
+            padding: 30px 40px;
+            border: 1px solid var(--color-border);
+            border-radius: var(--border-radius-lg);
+            background-color: var(--color-bg-card);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+        .logo {
+            max-width: 70%; /* Control max size relative to container */
+            height: auto;
+            display: block;
+            margin: 0 auto 25px;
+        }
+        h1 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-top: 0;
+            margin-bottom: 15px;
+            color: var(--color-text);
+        }
+        p {
+            font-size: 17px;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            color: var(--color-text-secondary);
+        }
+        .loader {
+            border: 4px solid #333;
+            border-top: 4px solid var(--color-primary);
+            border-radius: 50%;
+            width: 45px;
+            height: 45px;
+            animation: spin 1.2s linear infinite;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        footer {
+            margin-top: 30px; /* Pushes footer to bottom when using flex column */
+            padding: 20px 0;
+        }
+        footer p {
+            font-size: 12px;
+            color: var(--color-text-secondary);
+            margin: 0;
+            line-height: 1.5;
+        }
+         .footer-socials { margin-bottom: 10px; }
+        .footer-social-button { display: inline-block; opacity: 0.8; }
+        .footer-social-button:hover { opacity: 1; }
+        .footer-social-icon { vertical-align: middle; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="/assets/images/techelite-logo.png" alt="Tech Elite Automation Logo" class="logo"> <!-- Updated Path -->
+        <h1>Site Enhancements Underway</h1>
+        <p>We're currently deploying exciting new upgrades to our platform. Service will resume shortly. Thank you for your patience!</p>
+        <div class="loader"></div>
+    </div>
+    <footer>
+        <div class="footer-socials">
+            <a href="https://github.com/TechEliteAutomation" target="_blank" rel="noopener" class="footer-social-button" aria-label="GitHub Profile">
+                <img src="/assets/images/github-icon.svg" alt="GitHub Logo" class="footer-social-icon" width="25" height="25"> <!-- Updated Path -->
+            </a>
+        </div>
+        <p>&copy; <span id="current-year-maintenance"></span> TechEliteAutomation.com. All rights reserved.</p>
+    </footer>
+    <script>
+        document.getElementById('current-year-maintenance').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
+<!-- END OF FILE: maintenance.html -->
