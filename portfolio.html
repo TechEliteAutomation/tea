@@ -1,4 +1,4 @@
-<!-- START OF FILE: portfolio.html -->
+<!-- START OF FILE: portfolio.html (Revised for Maverick) -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +9,7 @@
         default-src 'self'; 
         script-src 'self' https://cdn.emailjs.com https://www.googletagmanager.com; 
         style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; 
-        img-src 'self' data:; 
+        img-src 'self' data: https://via.placeholder.com; /* Allow placeholder.com for mockups */
         font-src 'self' https://fonts.gstatic.com;
         connect-src 'self' https://api.emailjs.com https://www.google-analytics.com;
         form-action 'self'; 
@@ -17,15 +17,14 @@
         base-uri 'self';
         object-src 'none';">
 
-    <title>Our Portfolio | Case Studies | Tech Elite Automation</title>
-    <meta name="description" content="Explore Tech Elite Automation's portfolio of successful projects: AI-driven efficiency, IT cost reduction, and enhanced system throughput.">
-    <meta name="keywords" content="technology portfolio, AI case studies, IT infrastructure projects, automation success stories, full-stack development examples">
-    <meta name="author" content="Tech Elite Automation">
-    <meta name="robots" content="index, follow">
+    <title>Capabilities Showcase | Tech Elite Automation</title>
+    <meta name="description" content="Explore Tech Elite Automation's capabilities through project highlights, showcasing expertise in AI, custom software development, and web solutions.">
+    <!-- Noindex for now, as it's tailored and might change when you go to axiom.dev -->
+    <meta name="robots" content="noindex, nofollow"> 
     <link rel="canonical" href="https://techeliteautomation.com/portfolio.html" />
 
-    <meta property="og:title" content="Our Portfolio | Case Studies | Tech Elite Automation">
-    <meta property="og:description" content="See how Tech Elite Automation has delivered measurable results through innovative AI, DevOps, and full-stack solutions.">
+    <meta property="og:title" content="Capabilities Showcase | Tech Elite Automation">
+    <meta property="og:description" content="Demonstrating our skills in building innovative AI tools, dashboards, and web solutions.">
     <meta property="og:image" content="https://techeliteautomation.com/assets/images/techelite-og-logo.png">
     <meta property="og:url" content="https://techeliteautomation.com/portfolio.html">
     <meta property="og:type" content="website">
@@ -46,43 +45,14 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "CollectionPage", // Or ItemList if you prefer
-      "name": "Tech Elite Automation Portfolio",
-      "description": "A collection of case studies showcasing successful AI, DevOps, and full-stack projects by Tech Elite Automation.",
+      "@type": "CollectionPage",
+      "name": "Tech Elite Automation Capabilities Showcase",
+      "description": "A collection of projects and demos showcasing expertise in AI, custom software, and web solutions.",
       "url": "https://techeliteautomation.com/portfolio.html",
       "mainEntity": {
         "@type": "ItemList",
         "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "item": {
-              "@type": "CreativeWork", // Or more specific like "SoftwareApplication" or "Project"
-              "name": "Case Study: AI-Driven Operational Efficiency",
-              "url": "https://techeliteautomation.com/portfolio.html#case-ai-efficiency",
-              "description": "Achieved a 30% gain in operational efficiency by engineering autonomous AI agents for data processing."
-            }
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "item": {
-              "@type": "CreativeWork",
-              "name": "Case Study: Cloud & On-Premises Cost Reduction",
-              "url": "https://techeliteautomation.com/portfolio.html#case-cloud-cost",
-              "description": "Reduced operational costs by 25% through optimization of cloud and on-premises infrastructure."
-            }
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "item": {
-              "@type": "CreativeWork",
-              "name": "Case Study: EDI System Throughput Enhancement",
-              "url": "https://techeliteautomation.com/portfolio.html#case-edi-throughput",
-              "description": "Increased EDI processing throughput by 75% via automated Excel solutions and system enhancements."
-            }
-          }
+          // Add items as they are defined below
         ]
       },
       "publisher": {
@@ -132,114 +102,136 @@
     <main>
         <section class="page-hero-section text-center">
             <div class="container">
-                <h1 class="page-title">Our Portfolio of Success</h1>
-                <p class="page-subtitle lead">Demonstrating our capability to deliver tangible results and transformative technology solutions across diverse challenges.</p>
+                <h1 class="page-title">Capabilities Showcase</h1>
+                <p class="page-subtitle lead">Illustrating our expertise in developing innovative and effective technology solutions.</p>
             </div>
         </section>
 
-        <section id="case-studies-intro" class="content-section">
+        <section id="portfolio-intro" class="content-section">
             <div class="container text-center">
-                <p class="section-intro">Below are highlights of projects where Tech Elite Automation has provided significant value. Each case study reflects our commitment to understanding client needs and engineering solutions that drive efficiency, reduce costs, and enhance system capabilities. (Client names and specific sensitive details are anonymized for confidentiality).</p>
+                <p class="section-intro">This showcase highlights a selection of projects and custom-developed tools that demonstrate our technical capabilities and problem-solving approach. We focus on delivering solutions that are not only functional but also provide clear business value and efficiency.</p>
             </div>
         </section>
 
-        <section id="case-ai-efficiency" class="content-section portfolio-case-study alt-bg">
+        <!-- Showcase Item 1: Maverick Demos (Combined or Separate) -->
+        <section id="showcase-maverick-demos" class="content-section portfolio-case-study alt-bg">
             <div class="container">
-                <h2 class="case-study-title">Case Study 1: AI-Driven Operational Efficiency Boost</h2>
+                <h2 class="case-study-title">Custom Prototypes for Maverick Shipping</h2>
                 <div class="case-study-grid">
                     <div class="case-study-details">
-                        <h3>The Challenge:</h3>
-                        <p>A client faced significant manual effort and time consumption in research, data extraction from varied document formats, and multi-format file processing, leading to bottlenecks and increased operational overhead.</p>
-                        <h3>Our Solution:</h3>
-                        <p>Tech Elite Automation engineered autonomous AI agents leveraging Google's Gemini API and efficient local LLMs. These agents were designed to optimize research workflows, accurately extract data from diverse unstructured sources (PDFs, text files, scanned documents), and automate the processing of multiple file formats. Custom Python scripts were developed for seamless integration and robust data handling, including error checking and reporting mechanisms.</p>
-                        <h3>Key Technologies:</h3>
-                        <ul class="tech-list">
-                            <li>Google Gemini API, Local LLMs (Ollama-based)</li>
-                            <li>Python, Pandas</li>
-                            <li>Natural Language Processing (NLP)</li>
-                            <li>Automated File Parsers</li>
-                        </ul>
-                    </div>
-                    <div class="case-study-results">
-                        <div class="result-highlight-box">
-                            <span class="result-metric">30%</span>
-                            <span class="result-label">Gain in Operational Efficiency</span>
-                        </div>
-                        <p><strong>Additional Outcomes:</strong></p>
+                        <h3>Project Overview:</h3>
+                        <p>Developed and presented a suite of tailored software prototypes for Maverick Shipping to demonstrate specific capabilities and address potential operational enhancements. This included a data-driven dashboard, an AI-powered web application utilizing the Gemini API, and a conceptual website design.</p>
+                        <h3>Key Features & Capabilities Demonstrated:</h3>
                         <ul>
-                            <li>Significant reduction in manual labor hours.</li>
-                            <li>Improved data accuracy and consistency.</li>
-                            <li>Faster turnaround times for critical information processing.</li>
+                            <li><strong>Interactive Data Dashboard:</strong> Design and development of a user-friendly dashboard for visualizing key metrics, demonstrating data analysis and presentation skills. (<em>Consider adding a generic dashboard mockup image</em>).</li>
+                            <li><strong>Gemini API Web Application:</strong> Built a functional web application integrating Google's Gemini API, showcasing expertise in AI implementation, API usage, and front-end/back-end development for intelligent tools.</li>
+                            <li><strong>Conceptual Website Design:</strong> Created a modern, responsive website concept for Maverick Shipping, emphasizing user experience, clear information architecture, and brand alignment. (<em>Consider adding a generic website mockup image</em>).</li>
                         </ul>
-                         <a href="/services/ai-automation.html" class="btn btn-secondary btn-sm mt-2">Related Service: AI & Automation</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="case-cloud-cost" class="content-section portfolio-case-study">
-            <div class="container">
-                <h2 class="case-study-title">Case Study 2: Cloud & On-Premises Infrastructure Cost Reduction</h2>
-                 <div class="case-study-grid">
-                    <div class="case-study-details">
-                        <h3>The Challenge:</h3>
-                        <p>A client was experiencing escalating operational costs associated with their extensive cloud and on-premises IT infrastructure. Resource allocation was suboptimal, and scalability was not efficiently managed, leading to wasted expenditure.</p>
-                        <h3>Our Solution:</h3>
-                        <p>Tech Elite Automation conducted a thorough audit of the existing infrastructure, identifying areas for optimization in resource allocation, instance sizing, and service utilization across cloud platforms (e.g., Azure) and on-premises servers. We implemented Infrastructure-as-Code (IaC) practices for better management, refined auto-scaling policies, and consolidated underutilized resources. This also involved enhancing monitoring to proactively manage resource consumption.</p>
-                        <h3>Key Technologies:</h3>
+                        <h3>Technologies Utilized:</h3>
                         <ul class="tech-list">
-                            <li>Cloud Cost Management Tools (Azure Cost Management, etc.)</li>
-                            <li>Infrastructure-as-Code (Terraform, Ansible)</li>
-                            <li>Monitoring Solutions</li>
-                            <li>Virtualization Technologies</li>
+                            <li>Google Gemini API</li>
+                            <li>Web Development (HTML, CSS, JavaScript, [Mention relevant backend if used])</li>
+                            <li>Data Visualization Libraries (if applicable)</li>
+                            <li>UI/UX Design Principles</li>
                         </ul>
                     </div>
                     <div class="case-study-results">
                          <div class="result-highlight-box">
-                            <span class="result-metric">25%</span>
-                            <span class="result-label">Reduction in Operational Costs</span>
+                            <img src="/assets/icons/icon-ai.svg" alt="AI Capability Icon" class="result-card-icon-lg"> <!-- Larger Icon for emphasis -->
+                            <span class="result-label">Advanced Prototyping & AI Integration</span>
                         </div>
-                        <p><strong>Additional Outcomes:</strong></p>
+                        <p><strong>Outcomes for Maverick:</strong></p>
                         <ul>
-                            <li>Improved infrastructure scalability and resilience.</li>
-                            <li>Enhanced visibility into resource utilization.</li>
-                            <li>Streamlined infrastructure management processes.</li>
+                            <li>Provided a clear vision of potential software solutions.</li>
+                            <li>Demonstrated rapid development and AI integration capabilities.</li>
+                            <li>Offered tangible examples of how technology can address specific business needs.</li>
                         </ul>
-                        <a href="/services/devops-infrastructure.html" class="btn btn-secondary btn-sm mt-2">Related Service: DevOps & Infrastructure</a>
+                        <a href="/services/ai-automation.html" class="btn btn-secondary btn-sm mt-2">Related Service: AI & Automation</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="case-edi-throughput" class="content-section portfolio-case-study alt-bg">
+        <!-- Showcase Item 2: Custom Automation & AI Scripts -->
+        <section id="showcase-automation-scripts" class="content-section portfolio-case-study">
             <div class="container">
-                <h2 class="case-study-title">Case Study 3: EDI System & Excel Automation for Throughput Enhancement</h2>
+                <h2 class="case-study-title">Automation & AI Scripting Expertise</h2>
+                 <div class="case-study-grid">
+                    <div class="case-study-details">
+                        <h3>Project Overview:</h3>
+                        <p>Developed a collection of custom Python scripts focused on AI-powered automation and efficient file/data processing. These scripts exemplify our ability to create tailored tools that solve specific operational challenges and improve productivity.</p>
+                        <h3>Examples of Scripts & Capabilities:</h3>
+                        <ul>
+                            <li><strong>Gemini API Integration Script:</strong> A Python script demonstrating seamless interaction with the Google Gemini API for tasks such as automated content generation, data analysis, or research assistance. (<em>Link to your GitHub for this script if appropriate</em>).</li>
+                            <li><strong>Advanced File Processing Utilities:</strong> Custom scripts for automated batch processing of files, data extraction from various formats (text, CSV, potentially others), file renaming/organization, and data validation, significantly reducing manual effort.</li>
+                            <li><strong>System Automation Snippets:</strong> Bash and Python examples for automating routine system administration tasks, updates, or backups, showcasing an understanding of operational IT efficiency.</li>
+                        </ul>
+                        <h3>Key Technologies & Skills:</h3>
+                        <ul class="tech-list">
+                            <li>Python</li>
+                            <li>Google Gemini API</li>
+                            <li>Bash Scripting</li>
+                            <li>File I/O & Parsing</li>
+                            <li>Data Manipulation</li>
+                            <li>API Integration</li>
+                        </ul>
+                    </div>
+                    <div class="case-study-results">
+                         <div class="result-highlight-box">
+                             <img src="/assets/icons/icon-efficiency.svg" alt="Efficiency Icon" class="result-card-icon-lg">
+                            <span class="result-label">Custom Tooling & Efficiency Gains</span>
+                        </div>
+                        <p><strong>Demonstrated Value:</strong></p>
+                        <ul>
+                            <li>Ability to rapidly develop custom tools for specific needs.</li>
+                            <li>Expertise in leveraging powerful APIs like Gemini for intelligent automation.</li>
+                            <li>Proven skills in automating repetitive tasks, leading to potential time and cost savings.</li>
+                        </ul>
+                        <!-- If you have a general GitHub profile link for scripts -->
+                        <a href="https://github.com/TechEliteAutomation" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm mt-2">View Scripts on GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Showcase Item 3: Web Design & Brand Identity Project -->
+        <section id="showcase-web-design" class="content-section portfolio-case-study alt-bg">
+            <div class="container">
+                <h2 class="case-study-title">Web Design & Brand Identity Development</h2>
                 <div class="case-study-grid">
                     <div class="case-study-details">
-                        <h3>The Challenge:</h3>
-                        <p>A client managing SAAS-based insurance benefits systems faced slow processing times and potential for errors in data exchange, largely due to manual steps and complex Excel-based operations within their EDI workflows.</p>
+                        <h3>Client & Challenge:</h3>
+                        <p>A previous web design client required a complete online presence overhaul, including a new logo and a modern, responsive website to effectively represent their brand and attract customers.</p>
                         <h3>Our Solution:</h3>
-                        <p>Tech Elite Automation developed automated Excel solutions incorporating dynamic formulas, conditional formatting, and VBA/Python scripting to streamline data manipulation and validation. We enhanced the EDI system's interface points for smoother data flow and implemented probabilistic QA testing frameworks to ensure data integrity and achieve a high error detection rate, significantly increasing processing throughput and reliability.</p>
-                        <h3>Key Technologies:</h3>
+                        <p>Tech Elite Automation (under previous freelance capacity) delivered a comprehensive solution encompassing:
+                            <ul>
+                                <li><strong>Logo Design:</strong> Created a unique and professional logo reflecting the client's brand values and target audience.</li>
+                                <li><strong>Website Design & Development:</strong> Designed and built a fully responsive, mobile-first website with a clean user interface, intuitive navigation, and SEO best practices. The site effectively showcased the client's services and provided clear calls to action.</li>
+                            </ul>
+                        </p>
+                        <h3>Key Capabilities & Technologies:</h3>
                         <ul class="tech-list">
-                            <li>Microsoft Excel (Advanced Formulas, VBA)</li>
-                            <li>Python (for scripting and automation)</li>
-                            <li>EDI Standards (X12, EDIFACT - awareness)</li>
-                            <li>Custom QA Testing Scripts</li>
+                            <li>Graphic Design (Logo Creation)</li>
+                            <li>UI/UX Design Principles</li>
+                            <li>HTML, CSS, JavaScript</li>
+                            <li>Responsive Web Design</li>
+                            <li>Content Management System (if applicable, e.g., WordPress)</li>
+                            <li>SEO Fundamentals</li>
                         </ul>
                     </div>
                     <div class="case-study-results">
                         <div class="result-highlight-box">
-                            <span class="result-metric">75%</span>
-                            <span class="result-label">Increase in Processing Throughput</span>
+                            <img src="/assets/icons/icon-full-stack.svg" alt="Web Design Icon" class="result-card-icon-lg">
+                            <span class="result-label">Enhanced Online Presence & Branding</span>
                         </div>
-                        <p><strong>Additional Outcomes:</strong></p>
+                        <p><strong>Project Outcomes:</strong></p>
                         <ul>
-                            <li>100% error detection rate for specific critical data points.</li>
-                            <li>Strengthened overall system reliability and data integrity.</li>
-                            <li>Improved client satisfaction due to faster and more accurate processing.</li>
+                            <li>Delivered a professional, modern brand identity and website.</li>
+                            <li>Improved user experience and engagement on the client's site.</li>
+                            <li>Established a solid foundation for the client's online marketing efforts.</li>
                         </ul>
-                        <a href="/services/full-stack-data.html" class="btn btn-secondary btn-sm mt-2">Related Service: Full-Stack & Data</a>
+                         <!-- You could link to an anonymized version or a description if the site is no longer managed -->
+                         <!-- <a href="#" class="btn btn-secondary btn-sm mt-2">View (Anonymized) Design Concept</a> -->
                     </div>
                 </div>
             </div>
@@ -247,9 +239,9 @@
         
         <section id="cta-portfolio" class="content-section text-center">
             <div class="container">
-                <h2 class="section-title">Let's Build Your Success Story</h2>
-                <p class="section-intro">Inspired by these results? Tech Elite Automation is ready to apply its expertise to your unique challenges. Contact us to discuss how we can achieve similar impactful outcomes for your business.</p>
-                <a href="/contact.html" class="btn btn-primary btn-lg">Start Your Project Today</a>
+                <h2 class="section-title">Let's Discuss Your Next Project</h2>
+                <p class="section-intro">The examples above provide a glimpse into our capabilities. We are eager to understand your specific challenges and demonstrate how Tech Elite Automation can deliver tailored, high-impact solutions for your business.</p>
+                <a href="/contact.html" class="btn btn-primary btn-lg">Contact Us to Learn More</a>
             </div>
         </section>
 
@@ -268,7 +260,7 @@
                     <ul>
                         <li><a href="/about.html">About Us</a></li>
                         <li><a href="/services.html">Our Services</a></li>
-                        <li><a href="/portfolio.html">Case Studies</a></li>
+                        <li><a href="/portfolio.html">Showcase</a></li>
                         <li><a href="/security-practices.html">Security</a></li>
                         <li><a href="/contact.html">Contact Us</a></li>
                         <li><a href="/legal/privacy-policy.html">Privacy Policy</a></li>
@@ -286,12 +278,13 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; <span id="current-year"></span> TechEliteAutomation.com. All rights reserved.</p>
+                <p>© <span id="current-year"></span> TechEliteAutomation.com. All rights reserved.</p>
             </div>
         </div>
     </footer>
     
     <script src="/js/main.js"></script>
+    <!-- No EmailJS needed on portfolio page unless there's a specific form -->
 </body>
 </html>
-<!-- END OF FILE: portfolio.html -->
+<!-- END OF FILE: portfolio.html (Revised for Maverick) -->
