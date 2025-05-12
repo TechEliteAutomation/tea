@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // - Public Key: Account -> API Keys
     // - Service ID: Email Services -> (Your service)
     // - Template ID: Email Templates -> (Your template)
-    const EMAILJS_PUBLIC_KEY = 'j-OrtrloWJVQ-6oHi';     // Your Public Key
+    const EMAILJS_PUBLIC_KEY = 'sZpXVunUXQ9UdV7km';     // Your Public Key
     const EMAILJS_SERVICE_ID = 'service_c32q7a5';    // Your Service ID
     const EMAILJS_TEMPLATE_ID = 'template_rjaqoee';   // Your Template ID
     // --- END: EmailJS Configuration ---
