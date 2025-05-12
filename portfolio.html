@@ -1,4 +1,4 @@
-<!-- START OF FILE: portfolio.html (Revised for Maverick) -->
+<!-- START OF FILE: portfolio.html (Revised) -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,21 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSP (Content Security Policy) -->
     <meta http-equiv="Content-Security-Policy" content="
-        default-src 'self'; 
-        script-src 'self' https://cdn.emailjs.com https://www.googletagmanager.com; 
-        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; 
+        default-src 'self';
+        script-src 'self' https://cdn.emailjs.com https://www.googletagmanager.com;
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
         img-src 'self' data: https://via.placeholder.com; /* Allow placeholder.com for mockups */
         font-src 'self' https://fonts.gstatic.com;
         connect-src 'self' https://api.emailjs.com https://www.google-analytics.com;
-        form-action 'self'; 
-        frame-ancestors 'none'; 
+        form-action 'self';
+        frame-ancestors 'none';
         base-uri 'self';
         object-src 'none';">
 
     <title>Capabilities Showcase | Tech Elite Automation</title>
     <meta name="description" content="Explore Tech Elite Automation's capabilities through project highlights, showcasing expertise in AI, custom software development, and web solutions.">
     <!-- Noindex for now, as it's tailored and might change when you go to axiom.dev -->
-    <meta name="robots" content="noindex, nofollow"> 
+    <meta name="robots" content="noindex, nofollow">
     <link rel="canonical" href="https://techeliteautomation.com/portfolio.html" />
 
     <meta property="og:title" content="Capabilities Showcase | Tech Elite Automation">
@@ -36,9 +36,9 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet"
           integrity="sha384-PLACEHOLDER_FONT_HASH" crossorigin="anonymous">
-    
+
     <link rel="stylesheet" href="/css/style.css">
 
     <!-- Structured Data for SEO (CollectionPage or ItemList for portfolio items) -->
@@ -52,7 +52,11 @@
       "mainEntity": {
         "@type": "ItemList",
         "itemListElement": [
-          // Add items as they are defined below
+          // Add items as they are defined below (Optional, can be complex)
+          // Example Item Structure:
+          // { "@type": "ListItem", "position": 1, "item": { "@type": "CreativeWork", "name": "Automation & AI Scripting Expertise", "url": "https://techeliteautomation.com/portfolio.html#showcase-automation-scripts" } },
+          // { "@type": "ListItem", "position": 2, "item": { "@type": "CreativeWork", "name": "NYC Singles Dance - Web Design & Branding", "url": "https://techeliteautomation.com/portfolio.html#showcase-web-design" } },
+          // { "@type": "ListItem", "position": 3, "item": { "@type": "CreativeWork", "name": "Custom Internal Dashboard Development", "url": "https://techeliteautomation.com/portfolio.html#showcase-internal-tool" } }
         ]
       },
       "publisher": {
@@ -113,46 +117,7 @@
             </div>
         </section>
 
-        <!-- Showcase Item 1: Maverick Demos (Combined or Separate) -->
-        <section id="showcase-maverick-demos" class="content-section portfolio-case-study alt-bg">
-            <div class="container">
-                <h2 class="case-study-title">Custom Prototypes for Maverick Shipping</h2>
-                <div class="case-study-grid">
-                    <div class="case-study-details">
-                        <h3>Project Overview:</h3>
-                        <p>Developed and presented a suite of tailored software prototypes for Maverick Shipping to demonstrate specific capabilities and address potential operational enhancements. This included a data-driven dashboard, an AI-powered web application utilizing the Gemini API, and a conceptual website design.</p>
-                        <h3>Key Features & Capabilities Demonstrated:</h3>
-                        <ul>
-                            <li><strong>Interactive Data Dashboard:</strong> Design and development of a user-friendly dashboard for visualizing key metrics, demonstrating data analysis and presentation skills. (<em>Consider adding a generic dashboard mockup image</em>).</li>
-                            <li><strong>Gemini API Web Application:</strong> Built a functional web application integrating Google's Gemini API, showcasing expertise in AI implementation, API usage, and front-end/back-end development for intelligent tools.</li>
-                            <li><strong>Conceptual Website Design:</strong> Created a modern, responsive website concept for Maverick Shipping, emphasizing user experience, clear information architecture, and brand alignment. (<em>Consider adding a generic website mockup image</em>).</li>
-                        </ul>
-                        <h3>Technologies Utilized:</h3>
-                        <ul class="tech-list">
-                            <li>Google Gemini API</li>
-                            <li>Web Development (HTML, CSS, JavaScript, [Mention relevant backend if used])</li>
-                            <li>Data Visualization Libraries (if applicable)</li>
-                            <li>UI/UX Design Principles</li>
-                        </ul>
-                    </div>
-                    <div class="case-study-results">
-                         <div class="result-highlight-box">
-                            <img src="/assets/icons/icon-ai.svg" alt="AI Capability Icon" class="result-card-icon-lg"> <!-- Larger Icon for emphasis -->
-                            <span class="result-label">Advanced Prototyping & AI Integration</span>
-                        </div>
-                        <p><strong>Outcomes for Maverick:</strong></p>
-                        <ul>
-                            <li>Provided a clear vision of potential software solutions.</li>
-                            <li>Demonstrated rapid development and AI integration capabilities.</li>
-                            <li>Offered tangible examples of how technology can address specific business needs.</li>
-                        </ul>
-                        <a href="/services/ai-automation.html" class="btn btn-secondary btn-sm mt-2">Related Service: AI & Automation</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Showcase Item 2: Custom Automation & AI Scripts -->
+        <!-- Showcase Item 1: Custom Automation & AI Scripts (No Change) -->
         <section id="showcase-automation-scripts" class="content-section portfolio-case-study">
             <div class="container">
                 <h2 class="case-study-title">Automation & AI Scripting Expertise</h2>
@@ -162,7 +127,7 @@
                         <p>Developed a collection of custom Python scripts focused on AI-powered automation and efficient file/data processing. These scripts exemplify our ability to create tailored tools that solve specific operational challenges and improve productivity.</p>
                         <h3>Examples of Scripts & Capabilities:</h3>
                         <ul>
-                            <li><strong>Gemini API Integration Script:</strong> A Python script demonstrating seamless interaction with the Google Gemini API for tasks such as automated content generation, data analysis, or research assistance. (<em>Link to your GitHub for this script if appropriate</em>).</li>
+                            <li><strong>Gemini API Integration Script:</strong> A Python script demonstrating seamless interaction with the Google Gemini API for tasks such as automated content generation, data analysis, or research assistance.</li>
                             <li><strong>Advanced File Processing Utilities:</strong> Custom scripts for automated batch processing of files, data extraction from various formats (text, CSV, potentially others), file renaming/organization, and data validation, significantly reducing manual effort.</li>
                             <li><strong>System Automation Snippets:</strong> Bash and Python examples for automating routine system administration tasks, updates, or backups, showcasing an understanding of operational IT efficiency.</li>
                         </ul>
@@ -187,35 +152,33 @@
                             <li>Expertise in leveraging powerful APIs like Gemini for intelligent automation.</li>
                             <li>Proven skills in automating repetitive tasks, leading to potential time and cost savings.</li>
                         </ul>
-                        <!-- If you have a general GitHub profile link for scripts -->
                         <a href="https://github.com/TechEliteAutomation" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm mt-2">View Scripts on GitHub</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Showcase Item 3: Web Design & Brand Identity Project -->
+        <!-- Showcase Item 2: Web Design & Brand Identity Project (Updated for NYC Singles Dance) -->
         <section id="showcase-web-design" class="content-section portfolio-case-study alt-bg">
             <div class="container">
-                <h2 class="case-study-title">Web Design & Brand Identity Development</h2>
+                <h2 class="case-study-title">NYC Singles Dance - Web Design & Branding</h2>
                 <div class="case-study-grid">
                     <div class="case-study-details">
                         <h3>Client & Challenge:</h3>
-                        <p>A previous web design client required a complete online presence overhaul, including a new logo and a modern, responsive website to effectively represent their brand and attract customers.</p>
+                        <p>NYC Singles Dance, a community events organizer, required a website refresh and a new logo to better attract attendees, reflect their vibrant atmosphere, and streamline event promotion.</p>
                         <h3>Our Solution:</h3>
-                        <p>Tech Elite Automation (under previous freelance capacity) delivered a comprehensive solution encompassing:
+                        <p>Tech Elite Automation (under previous freelance capacity) delivered a comprehensive solution including:</p>
                             <ul>
-                                <li><strong>Logo Design:</strong> Created a unique and professional logo reflecting the client's brand values and target audience.</li>
-                                <li><strong>Website Design & Development:</strong> Designed and built a fully responsive, mobile-first website with a clean user interface, intuitive navigation, and SEO best practices. The site effectively showcased the client's services and provided clear calls to action.</li>
+                                <li><strong>Logo Design:</strong> Created a dynamic and welcoming logo representing the social energy and dance focus of the NYC Singles Dance events.</li>
+                                <li><strong>Website Design & Development:</strong> Designed and built a user-friendly, responsive website focused on clear event listings, easy navigation for potential attendees, and showcasing the fun atmosphere. The site incorporated the new branding and was optimized for finding event information quickly.</li>
                             </ul>
-                        </p>
                         <h3>Key Capabilities & Technologies:</h3>
                         <ul class="tech-list">
                             <li>Graphic Design (Logo Creation)</li>
                             <li>UI/UX Design Principles</li>
                             <li>HTML, CSS, JavaScript</li>
                             <li>Responsive Web Design</li>
-                            <li>Content Management System (if applicable, e.g., WordPress)</li>
+                            <li>Event Promotion Features</li>
                             <li>SEO Fundamentals</li>
                         </ul>
                     </div>
@@ -226,17 +189,60 @@
                         </div>
                         <p><strong>Project Outcomes:</strong></p>
                         <ul>
-                            <li>Delivered a professional, modern brand identity and website.</li>
-                            <li>Improved user experience and engagement on the client's site.</li>
-                            <li>Established a solid foundation for the client's online marketing efforts.</li>
+                            <li>Delivered a professional, modern brand identity and website tailored to NYC Singles Dance.</li>
+                            <li>Improved user experience for finding event details and understanding the community.</li>
+                            <li>Established a more effective platform for promoting events and attracting attendees.</li>
                         </ul>
-                         <!-- You could link to an anonymized version or a description if the site is no longer managed -->
-                         <!-- <a href="#" class="btn btn-secondary btn-sm mt-2">View (Anonymized) Design Concept</a> -->
+                         <a href="/services/web-development.html" class="btn btn-secondary btn-sm mt-2">Related Service: Web Development</a>
                     </div>
                 </div>
             </div>
         </section>
-        
+
+        <!-- Showcase Item 3: Custom Internal Dashboard (Suggested Addition) -->
+        <section id="showcase-internal-tool" class="content-section portfolio-case-study">
+            <div class="container">
+                <h2 class="case-study-title">Custom Internal Dashboard Development</h2>
+                 <div class="case-study-grid">
+                    <div class="case-study-details">
+                        <h3>Project Overview:</h3>
+                        <p>Developed a bespoke internal web application for a client to streamline operations visibility (e.g., aggregating sales data, tracking project milestones, or monitoring key performance indicators). The primary goal was to replace cumbersome manual tracking (like spreadsheets) with an automated, secure, and real-time dashboard accessible to relevant team members.</p>
+                        <h3>Key Features & Capabilities Demonstrated:</h3>
+                        <ul>
+                            <li><strong>Real-time Data Aggregation:</strong> Integrated various data sources (databases, APIs, file uploads) into a unified view.</li>
+                            <li><strong>Interactive Visualizations:</strong> Utilized charting libraries to present data clearly and effectively (e.g., progress charts, sales trends).</li>
+                            <li><strong>User Role Management:</strong> Implemented access controls to ensure data security and relevance based on user roles.</li>
+                            <li><strong>Custom Reporting:</strong> Enabled generation of specific reports based on selected filters and date ranges.</li>
+                            <li><strong>Secure Authentication:</strong> Ensured secure login and data handling practices.</li>
+                        </ul>
+                        <h3>Key Technologies & Skills:</h3>
+                        <ul class="tech-list">
+                            <li>Backend Framework (e.g., Python/Flask, Node.js/Express)</li>
+                            <li>Frontend Framework/Library (e.g., React, Vue, or Vanilla JS)</li>
+                            <li>Database Management (SQL or NoSQL)</li>
+                            <li>Data Visualization Libraries (e.g., Chart.js, D3.js)</li>
+                            <li>API Integration & Development</li>
+                            <li>Authentication/Authorization</li>
+                        </ul>
+                    </div>
+                    <div class="case-study-results">
+                         <div class="result-highlight-box">
+                             <img src="/assets/icons/icon-efficiency.svg" alt="Efficiency Icon" class="result-card-icon-lg"> <!-- Reusing efficiency icon -->
+                            <span class="result-label">Streamlined Operations & Data Access</span>
+                        </div>
+                        <p><strong>Demonstrated Value:</strong></p>
+                        <ul>
+                            <li>Significant reduction in time spent on manual data collection and reporting.</li>
+                            <li>Provided managers and teams with immediate access to actionable insights.</li>
+                            <li>Improved data accuracy, consistency, and security.</li>
+                            <li>Facilitated better decision-making through clear data visualization.</li>
+                        </ul>
+                        <a href="/services/custom-software.html" class="btn btn-secondary btn-sm mt-2">Related Service: Custom Software</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="cta-portfolio" class="content-section text-center">
             <div class="container">
                 <h2 class="section-title">Let's Discuss Your Next Project</h2>
@@ -282,9 +288,9 @@
             </div>
         </div>
     </footer>
-    
+
     <script src="/js/main.js"></script>
     <!-- No EmailJS needed on portfolio page unless there's a specific form -->
 </body>
 </html>
-<!-- END OF FILE: portfolio.html (Revised for Maverick) -->
+<!-- END OF FILE: portfolio.html (Revised) -->
