@@ -1,27 +1,30 @@
-/* START OF FILE: js/contact-form.js */
-
 // Wait for the HTML document to be fully loaded and parsed
 document.addEventListener('DOMContentLoaded', function () {
 
     // --- START: EmailJS Configuration ---
-    // IMPORTANT: Replace these placeholders with your actual EmailJS values!
-    // Find these in your EmailJS dashboard:
+    // IMPORTANT: Ensure these values exactly match your EmailJS dashboard!
     // - Public Key: Account -> API Keys
     // - Service ID: Email Services -> (Your service)
     // - Template ID: Email Templates -> (Your template)
-    const EMAILJS_PUBLIC_KEY = 'j-OrtrloWJVQ-6oHi'; 
-    const EMAILJS_SERVICE_ID = 'service_c32q7a5'; // Replace with your Service ID
-    const EMAILJS_TEMPLATE_ID = 'template_rjaqoee'; // Replace with your Template ID
+    const EMAILJS_PUBLIC_KEY = 'j-OrtrloWJVQ-6oHi';     // Your Public Key
+    const EMAILJS_SERVICE_ID = 'service_c32q7a5';    // Your Service ID
+    const EMAILJS_TEMPLATE_ID = 'template_rjaqoee';   // Your Template ID
     // --- END: EmailJS Configuration ---
 
-    // Initialize EmailJS with your Public Key
-    // Make sure the EMAILJS_PUBLIC_KEY above is correct.
-    if (EMAILJS_PUBLIC_KEY && EMAILJS_PUBLIC_KEY !== 'j-OrtrloWJVQ-6oHi') { // Basic check
+    // --- Initialize EmailJS ---
+    // Check if the Public Key looks valid (exists and is not a known placeholder)
+    // Add a console log to verify the key being used:
+    console.log("Attempting to initialize EmailJS with Public Key:", EMAILJS_PUBLIC_KEY);
+
+    if (EMAILJS_PUBLIC_KEY && EMAILJS_PUBLIC_KEY !== 'YOUR_PUBLIC_KEY' && !EMAILJS_PUBLIC_KEY.includes(' ')) { // Check if it's defined, not the placeholder 'YOUR_PUBLIC_KEY', and has no spaces
          emailjs.init(EMAILJS_PUBLIC_KEY);
+         console.log("EmailJS Initialized successfully."); // Add confirmation log
     } else {
-        console.error("EmailJS Public Key is missing or is a placeholder. Form will not work.");
-        // Optionally provide feedback to the user or disable the form entirely
+        console.error("EmailJS Public Key ('" + EMAILJS_PUBLIC_KEY + "') is missing, a placeholder, or invalid (e.g., contains spaces). Form initialization failed.");
+        // Optionally disable the form or show an error message permanently here
+        // For now, the later checks will catch configuration errors too.
     }
+    // --- End Initialization ---
 
 
     const contactForm = document.getElementById('contactForm');
@@ -35,12 +38,23 @@ document.addEventListener('DOMContentLoaded', function () {
             event.preventDefault(); // Prevent default form submission
 
             // --- Preliminary Check ---
-            // Check if Service ID or Template ID are still placeholders
+            // Check if Service ID or Template ID are missing or still placeholders
+            // We re-check the public key here just in case init failed silently earlier
             if (!EMAILJS_SERVICE_ID || EMAILJS_SERVICE_ID === 'YOUR_EMAILJS_SERVICE_ID' ||
                 !EMAILJS_TEMPLATE_ID || EMAILJS_TEMPLATE_ID === 'YOUR_EMAILJS_TEMPLATE_ID' ||
-                !EMAILJS_PUBLIC_KEY || EMAILJS_PUBLIC_KEY === 'YOUR_PUBLIC_KEY') {
+                !EMAILJS_PUBLIC_KEY || EMAILJS_PUBLIC_KEY === 'YOUR_PUBLIC_KEY' || EMAILJS_PUBLIC_KEY === 'j-OrtrloWJVQ-6oHi') { // Removed incorrect check from init, adding a basic check here
 
-                console.error("EmailJS configuration (Public Key, Service ID, or Template ID) is incomplete or uses placeholders.");
+                // Check specifically which one is missing/placeholder for better debugging
+                if (!EMAILJS_PUBLIC_KEY || EMAILJS_PUBLIC_KEY === 'YOUR_PUBLIC_KEY') {
+                     console.error("EmailJS Public Key is missing or is the default placeholder.");
+                }
+                 if (!EMAILJS_SERVICE_ID || EMAILJS_SERVICE_ID === 'YOUR_EMAILJS_SERVICE_ID') {
+                     console.error("EmailJS Service ID is missing or is the default placeholder.");
+                 }
+                 if (!EMAILJS_TEMPLATE_ID || EMAILJS_TEMPLATE_ID === 'YOUR_EMAILJS_TEMPLATE_ID') {
+                     console.error("EmailJS Template ID is missing or is the default placeholder.");
+                 }
+
                 formStatus.textContent = 'Form configuration error. Please contact the administrator.';
                 formStatus.className = 'form-status-message form-status-error'; // Use CSS class
                 submitButton.disabled = true; // Keep button disabled
@@ -56,7 +70,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // Send the form data using EmailJS
             // 'this' refers to the form element itself
-            emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, this)
+            // NOTE: sendForm implicitly uses the key from init(), but passing it again doesn't hurt
+            // and might be necessary if init() had issues that weren't fatal errors.
+            emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, this /*, EMAILJS_PUBLIC_KEY */) // Public key is optional here if init() worked
                 .then(function() {
                     // --- Success ---
                     formStatus.textContent = 'Message sent successfully! We\'ll be in touch soon.';
@@ -75,21 +91,22 @@ document.addEventListener('DOMContentLoaded', function () {
                 }, function(error) {
                     // --- Error ---
                     console.error('EmailJS Send Error:', error);
-                    formStatus.textContent = `Failed to send message. Error: ${error.text || 'Unknown error'}. Please try again or email us directly.`;
+                    // Display EmailJS specific error text if available
+                    let errorMessage = 'Failed to send message. Please try again or email us directly.';
+                    if (error && error.text) {
+                         errorMessage = `Failed to send message. Error (${error.status}): ${error.text}. Please try again or email us directly.`;
+                    } else if (error) {
+                         errorMessage = `Failed to send message. Error: ${JSON.stringify(error)}. Please try again or email us directly.`;
+                    }
+
+                    formStatus.textContent = errorMessage;
                     formStatus.className = 'form-status-message form-status-error'; // Use CSS class
                     submitButton.textContent = 'Send Failed';
 
-                    // Reset button after a delay, but keep the error message for a bit longer
+                    // Reset button after a delay
                      setTimeout(() => {
                         submitButton.disabled = false;
                         submitButton.textContent = originalButtonText;
-                        // Optionally clear the error message after a longer period or leave it
-                        // setTimeout(() => {
-                        //    if (formStatus.classList.contains('form-status-error')) { // Check if it's still the error message
-                        //        formStatus.textContent = '';
-                        //        formStatus.className = 'form-status-message';
-                        //    }
-                        // }, 10000); // e.g., clear error after 10 more seconds
                     }, 5000); // 5 seconds
                 });
         });
@@ -101,5 +118,3 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
 }); // End of DOMContentLoaded listener
-
-/* END OF FILE: js/contact-form.js */
