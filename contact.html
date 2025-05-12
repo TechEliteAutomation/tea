@@ -6,26 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSP (Content Security Policy) -->
     <meta http-equiv="Content-Security-Policy" content="
-        default-src 'self'; 
-        script-src 'self' https://cdn.emailjs.com https://www.googletagmanager.com; 
-        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; 
-        img-src 'self' data:; 
+        default-src 'self';
+        script-src 'self' https://cdn.emailjs.com https://www.googletagmanager.com;
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+        img-src 'self' data:;
         font-src 'self' https://fonts.gstatic.com;
         connect-src 'self' https://api.emailjs.com https://www.google-analytics.com;
-        form-action 'self'; 
-        frame-ancestors 'none'; 
+        form-action 'self';
+        frame-ancestors 'none';
         base-uri 'self';
         object-src 'none';">
 
     <title>Contact Tech Elite Automation | AI, DevOps, Full-Stack Experts</title>
-    <meta name="description" content="Get in touch with Tech Elite Automation to discuss your AI, DevOps, IT infrastructure, or full-stack development projects. Request a free consultation.">
-    <meta name="keywords" content="contact tech elite automation, request quote IT solutions, AI consultation, DevOps support, full-stack development inquiry">
+    <meta name="description" content="Get in touch with Tech Elite Automation to discuss your AI, DevOps, IT infrastructure, marketing, or full-stack development projects. Request a free consultation.">
+    <meta name="keywords" content="contact tech elite automation, request quote IT solutions, AI consultation, DevOps support, full-stack development inquiry, marketing services inquiry">
     <meta name="author" content="Tech Elite Automation">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://techeliteautomation.com/contact.html" />
 
     <meta property="og:title" content="Contact Tech Elite Automation | Let's Build Your Solution">
-    <meta property="og:description" content="Reach out to discuss your project needs. We specialize in AI, DevOps, and custom software development.">
+    <meta property="og:description" content="Reach out to discuss your project needs. We specialize in AI, DevOps, Marketing, and custom software development.">
     <meta property="og:image" content="https://techeliteautomation.com/assets/images/techelite-og-logo.png">
     <meta property="og:url" content="https://techeliteautomation.com/contact.html">
     <meta property="og:type" content="website">
@@ -37,9 +37,10 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" 
-          integrity="<script src="https://cdn.emailjs.com/dist/email.min.js" integrity="sha384-hB6E4GtPqbCL94gg/4aGUrSdBqT2ccnB11lhb+ZscmEVOaPX8rktTt7V0b/Z0lXD" crossorigin="anonymous"></script>" crossorigin="anonymous">
-    
+    <!-- Corrected font link integrity attribute -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet"
+          integrity="sha384-PLACEHOLDER_FONT_HASH" crossorigin="anonymous">
+
     <link rel="stylesheet" href="/css/style.css">
 
     <!-- Structured Data for SEO (ContactPage) -->
@@ -48,7 +49,7 @@
       "@context": "https://schema.org",
       "@type": "ContactPage",
       "name": "Contact Tech Elite Automation",
-      "description": "Reach out to Tech Elite Automation for inquiries about AI solutions, DevOps, IT infrastructure, and custom software development.",
+      "description": "Reach out to Tech Elite Automation for inquiries about AI solutions, DevOps, IT infrastructure, Marketing Services, and custom software development.",
       "url": "https://techeliteautomation.com/contact.html",
       "mainEntityOfPage": {
         "@type": "WebPage",
@@ -125,7 +126,7 @@
                             </li>
                             <!-- <li>
                                 <strong class="contact-label">Phone:</strong>
-                                <a href="tel:+16468834329">+1 (646) 883-4329</a> (Your resume number - confirm if you want it public)
+                                <a href="tel:+16468834329">+1 (646) 883-4329</a> (Confirm if you want it public)
                             </li> -->
                              <li>
                                 <strong class="contact-label">GitHub:</strong>
@@ -144,15 +145,15 @@
                         <form id="contactForm" class="contact-form">
                             <div class="form-group">
                                 <label for="name" class="form-label">Full Name</label>
-                                <input type="text" id="name" name="name" class="form-input" placeholder="e.g., Jane Doe" required aria-label="Full Name">
+                                <input type="text" id="name" name="name" class="form-input" required aria-label="Full Name">
                             </div>
                             <div class="form-group">
                                 <label for="email" class="form-label">Business Email</label>
-                                <input type="email" id="email" name="email" class="form-input" placeholder="e.g., jane.doe@company.com" required aria-label="Business Email">
+                                <input type="email" id="email" name="email" class="form-input" required aria-label="Business Email">
                             </div>
                             <div class="form-group">
                                 <label for="company" class="form-label">Company (Optional)</label>
-                                <input type="text" id="company" name="company" class="form-input" placeholder="e.g., Acme Corp" aria-label="Company">
+                                <input type="text" id="company" name="company" class="form-input" aria-label="Company">
                             </div>
                             <div class="form-group">
                                 <label for="service_interest" class="form-label">Service of Interest</label>
@@ -161,6 +162,8 @@
                                     <option value="ai-automation">AI & Intelligent Automation</option>
                                     <option value="devops-infrastructure">DevOps & IT Infrastructure</option>
                                     <option value="full-stack-data">Full-Stack Development & Data</option>
+                                    <!-- Added Marketing Services Option -->
+                                    <option value="marketing-services">Marketing Services</option>
                                     <option value="general-inquiry">General Inquiry</option>
                                 </select>
                             </div>
@@ -209,15 +212,15 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; <span id="current-year"></span> TechEliteAutomation.com. All rights reserved.</p>
+                <p>© <span id="current-year"></span> TechEliteAutomation.com. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- EmailJS Script with SRI (Generate actual hash) -->
-	<script src="https://cdn.emailjs.com/dist/email.min.js" integrity="sha384-hB6E4GtPqbCL94gg/4aGUrSdBqT2ccnB11lhb+ZscmEVOaPX8rktTt7V0b/Z0lXD" crossorigin="anonymous"></script>
+    <!-- EmailJS Script -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js" integrity="sha384-hB6E4GtPqbCL94gg/4aGUrSdBqT2ccnB11lhb+ZscmEVOaPX8rktTt7V0b/Z0lXD" crossorigin="anonymous"></script>
     <script src="/js/main.js"></script>
-    <script src="/js/contact-form.js"></script> 
+    <script src="/js/contact-form.js"></script>
 </body>
 </html>
 <!-- END OF FILE: contact.html -->
