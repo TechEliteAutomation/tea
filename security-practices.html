@@ -139,20 +139,6 @@
                         <li><strong>Static Site Architecture:</strong> Being a static website (HTML, CSS, client-side JS only), it inherently lacks many vulnerabilities common to dynamic, database-driven sites (e.g., SQL injection, server-side code execution vulnerabilities).</li>
                         <li><strong>Secure Third-Party Integrations:</strong> We carefully vet and securely integrate essential third-party services like EmailJS for contact forms, ensuring their scripts are loaded with SRI where applicable and their service is reputable.</li>
                     </ul>
-                    <div id="csp-details" class="code-block-container mt-2">
-                        <p><strong>Our Content Security Policy includes directives like:</strong></p>
-                        <pre><code>default-src 'self'; 
-script-src 'self' https://cdn.emailjs.com https://www.googletagmanager.com; 
-style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; 
-img-src 'self' data:; 
-font-src 'self' https://fonts.gstatic.com;
-connect-src 'self' https://api.emailjs.com https://www.google-analytics.com;
-form-action 'self'; 
-frame-ancestors 'none'; 
-base-uri 'self';
-object-src 'none';</code></pre>
-                        <p><small><em>Note: This is a representation. The actual policy is in the <code>&lt;head&gt;</code> of each page and may be updated. The <code>'unsafe-inline'</code> for styles is for compatibility with some dynamic styling aspects of Google Fonts or minor inline styles; we strive to minimize its use.</em></small></p>
-                    </div>
                 </div>
 
                 <div class="security-category">
@@ -177,7 +163,6 @@ object-src 'none';</code></pre>
                 <div class="footer-about">
                     <img src="/assets/images/techelite-logo.png" alt="Tech Elite Automation Logo" class="footer-logo">
                     <p>Driving innovation with expert AI, DevOps, and full-stack solutions.</p>
-                    <p class="footer-note">This site will transition to axiom.dev in the near future.</p>
                 </div>
                 <div class="footer-links">
                     <h4>Quick Links</h4>
