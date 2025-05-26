@@ -386,18 +386,30 @@ ul.tech-list li {
 .theme-toggle-button {
     background: none;
     border: 1px solid var(--color-border);
-    color: var(--color-text-secondary);
-    padding: 0.5rem 0.75rem;
+    color: var(--color-primary); /* This will color the SVG icon */
+    padding: 0.4rem; /* Adjusted padding for icon size */
     border-radius: var(--border-radius-sm);
     cursor: pointer;
-    font-size: 1.1rem; 
-    line-height: 1;
+    /* font-size: 1.4rem; /* No longer needed for emoji size, SVG size is separate */
+    line-height: 1; 
     margin-left: 1rem;
     transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+    display: inline-flex; 
+    align-items: center;
+    justify-content: center;
 }
-.theme-toggle-button:hover {
-    color: var(--color-text);
+.theme-toggle-button:hover,
+.theme-toggle-button:focus-visible {
+    color: var(--color-primary-hover); 
     background-color: rgba(var(--color-primary-rgb), 0.1);
+    border-color: var(--color-primary); 
+}
+
+/* Style for the SVG icons themselves within the button */
+.theme-toggle-button .theme-icon {
+    width: 20px;  /* Adjust size as needed */
+    height: 20px; /* Adjust size as needed */
+    display: block; /* Prevents extra space below inline SVGs */
 }
 
 
@@ -945,7 +957,12 @@ ul.tech-list li {
         border-bottom: none;
     }
     .nav-menu-container .theme-toggle-button {
-         margin: 0.5rem auto; 
+         margin: 0.75rem auto;
+         padding: 0.5rem; /* Adjust padding for mobile if needed */
+    }
+    .nav-menu-container .theme-toggle-button .theme-icon {
+        width: 22px; /* Slightly larger icon on mobile if desired */
+        height: 22px;
     }
     /* Hide main nav CTA if it's outside nav-menu-container, or style if inside */
     .nav-container > .nav-cta.btn { 
