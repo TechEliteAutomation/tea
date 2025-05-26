@@ -69,6 +69,9 @@
     /* Icon filters */
     --social-icon-filter: none; 
     --logo-image-url: url('/assets/images/techelite-logo.png');
+
+    /* --- MODIFIED: Service Card Icon Color for Dark Theme --- */
+    --service-card-icon-color: #CDD6E0; /* Brighter (light gray/blue) for dark mode */
 }
 
 html[data-theme="light"] {
@@ -131,6 +134,9 @@ html[data-theme="light"] {
     /* Icon filters */
     --social-icon-filter: invert(1) brightness(0.7); 
     /* --logo-image-url: url('/assets/images/techelite-logo-for-light.png'); */
+
+    /* --- MODIFIED: Service Card Icon Color for Light Theme --- */
+    --service-card-icon-color: #606F7B; /* Darker gray for light mode, adjust as needed */
 
     /* --- ADDED RULE FOR HERO HIGHLIGHT --- */
     .hero-title .highlight {
@@ -547,9 +553,17 @@ ul.tech-list li {
     width: 48px;
     height: 48px;
     margin-bottom: 1rem;
-    opacity: 0.8;
-    color: var(--color-primary); 
-    transition: color 0.3s ease;
+    opacity: 1; /* MODIFIED: Set to 1 for full visibility */
+    color: var(--service-card-icon-color); /* MODIFIED: Use the new theme variable for font icons */
+    fill: var(--service-card-icon-color);  /* MODIFIED: Use the new theme variable for SVGs */
+    transition: color 0.3s ease, fill 0.3s ease, opacity 0.3s ease; /* MODIFIED: Added fill and opacity to transition */
+}
+/* Fallback for nested SVGs, if .service-card-icon is a wrapper */
+.service-card-icon svg {
+    width: 100%; /* Ensure SVG takes full size of its container if it's nested */
+    height: 100%;
+    display: block;
+    fill: var(--service-card-icon-color); /* Explicitly color nested SVG */
 }
 .service-card-title { margin-top: 0; }
 .service-card-description {
