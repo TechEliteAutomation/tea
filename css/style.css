@@ -2,7 +2,7 @@
 /* --- CSS Variables for Theming --- */
 :root {
     /* Original Dark Theme Colors (default) */
-    --color-primary: #00aeff;
+    --color-primary: #00aeff; /* Your "high-tech blue" */
     --color-primary-rgb: 0, 174, 255;
     --color-primary-hover: #007fcc;
     --color-secondary: #00ccff;
@@ -70,8 +70,9 @@
     --social-icon-filter: none; 
     --logo-image-url: url('/assets/images/techelite-logo.png');
 
-    /* --- Service Card Icon Color for DARK Theme (Default) --- */
-    --service-card-icon-color: #CDD6E0; /* Brighter (light gray/blue) for dark mode */
+    /* --- Icon Colors for DARK Theme (Default) --- */
+    --service-card-icon-dark-color: var(--color-primary); /* High-tech blue */
+    --result-card-icon-dark-color: var(--color-primary);  /* High-tech blue */
 }
 
 html[data-theme="light"] {
@@ -135,8 +136,10 @@ html[data-theme="light"] {
     --social-icon-filter: invert(1) brightness(0.7); 
     /* --logo-image-url: url('/assets/images/techelite-logo-for-light.png'); */
 
-    /* --- Service Card Icon Color for LIGHT Theme --- */
-    --service-card-icon-color: #000000; /* Black for light mode */
+    /* --- Icon Colors for LIGHT Theme --- */
+    --service-card-icon-light-color: #000000; /* Black */
+    --result-card-icon-light-color: #000000;  /* Black */
+
 
     /* --- ADDED RULE FOR HERO HIGHLIGHT --- */
     .hero-title .highlight {
@@ -396,7 +399,6 @@ ul.tech-list li {
     padding: 0.4rem; /* Adjusted padding for icon size */
     border-radius: var(--border-radius-sm);
     cursor: pointer;
-    /* font-size: 1.4rem; /* No longer needed for emoji size, SVG size is separate */
     line-height: 1; 
     margin-left: 1rem;
     transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
@@ -413,9 +415,9 @@ ul.tech-list li {
 
 /* Style for the SVG icons themselves within the button */
 .theme-toggle-button .theme-icon {
-    width: 20px;  /* Adjust size as needed */
-    height: 20px; /* Adjust size as needed */
-    display: block; /* Prevents extra space below inline SVGs */
+    width: 20px;
+    height: 20px;
+    display: block;
 }
 
 
@@ -481,7 +483,6 @@ ul.tech-list li {
     font-size: 0.85rem;
 }
 
-
 /* --- Hero & Page Hero Sections --- */
 .hero-section, .page-hero-section {
     background-color: var(--color-bg); 
@@ -514,7 +515,6 @@ ul.tech-list li {
     justify-content: center;
     flex-wrap: wrap; 
 }
-
 
 /* --- Content Sections --- */
 .content-section {
@@ -549,35 +549,20 @@ ul.tech-list li {
     transform: translateY(-8px);
     box-shadow: var(--shadow-lg);
 }
-.service-card-icon {
+.service-card-icon { /* Applies to the <img> tag */
     width: 48px;
     height: 48px;
     margin-bottom: 1rem;
     opacity: 1; 
-    color: var(--service-card-icon-color); 
-    fill: var(--service-card-icon-color);  
-    transition: color 0.3s ease, fill 0.3s ease, opacity 0.3s ease; 
+    color: var(--service-card-icon-dark-color); /* Default to dark mode color (blue) */
+    /* fill: var(--service-card-icon-dark-color); /* For consistency if needed elsewhere */
+    transition: color 0.3s ease, fill 0.3s ease; 
 }
-/* Fallback for nested SVGs, if .service-card-icon is a wrapper */
-.service-card-icon svg {
-    width: 100%; 
-    height: 100%;
-    display: block;
-    fill: var(--service-card-icon-color); 
+html[data-theme="light"] .service-card-icon {
+    color: var(--service-card-icon-light-color); /* Override to light mode color (black) */
+    /* fill: var(--service-card-icon-light-color); */
 }
 .service-card-title { margin-top: 0; }
-
-/* New rule to fix icon color issue */
-.service-card-icon svg,
-.service-card-icon svg *,
-.service-card-icon path,
-.service-card-icon circle,
-.service-card-icon rect,
-.service-card-icon polygon {
-    fill: var(--service-card-icon-color) !important;
-    color: var(--service-card-icon-color) !important;
-}
-
 .service-card-description {
     font-size: 0.95rem;
     color: var(--color-text-secondary);
@@ -627,7 +612,6 @@ ul.tech-list li {
     font-size: 1rem;
     color: var(--color-text-secondary);
 }
-
 
 /* Individual Service Page Layout */
 .service-hero { background-color: var(--color-bg); } 
@@ -705,7 +689,6 @@ ul.tech-list li {
 }
 .sidebar-cta p { font-size: 0.95rem; }
 
-
 /* --- Results Showcase (Homepage & Portfolio) --- */
 .results-showcase {
     display: grid;
@@ -722,13 +705,17 @@ ul.tech-list li {
     box-shadow: var(--shadow-sm);
     transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
-.result-card-icon {
+.result-card-icon { /* Applies to the <img> tag */
     width: 36px;
     height: 36px;
     margin-bottom: 0.75rem;
-    color: var(--color-primary); /* Default for dark mode */
-    fill: var(--color-primary);  /* Default for dark mode */
+    color: var(--result-card-icon-dark-color); /* Default to dark mode color (blue) */
+    /* fill: var(--result-card-icon-dark-color); */
     transition: color 0.3s ease, fill 0.3s ease;
+}
+html[data-theme="light"] .result-card-icon {
+    color: var(--result-card-icon-light-color); /* Override to light mode color (black) */
+    /* fill: var(--result-card-icon-light-color); */
 }
 .result-card-metric {
     font-size: 2.25rem;
@@ -743,13 +730,6 @@ ul.tech-list li {
     color: var(--color-text-secondary);
     margin-bottom: 0;
 }
-
-/* --- Specific override for .result-card-icon in LIGHT MODE ONLY --- */
-html[data-theme="light"] .result-card-icon {
-    color: #000000; /* Black for light mode */
-    fill: #000000;  /* Black for light mode */
-}
-
 
 /* Portfolio Page Case Studies */
 .portfolio-case-study { padding: 2.5rem 0; }
@@ -802,7 +782,6 @@ html[data-theme="light"] .result-card-icon {
 .case-study-results p { margin-bottom: 0.75rem; font-size: 0.95rem; }
 .case-study-results ul { text-align: left; font-size: 0.95rem; }
 
-
 /* --- CTA Banner Section --- */
 .cta-banner-section { 
     padding: 3rem 0; 
@@ -810,7 +789,6 @@ html[data-theme="light"] .result-card-icon {
 }
 .cta-title { font-size: clamp(1.75rem, 4vw, 2.25rem); margin-bottom: 0.75rem; }
 .cta-text { font-size: 1.1rem; color: var(--color-text-secondary); max-width: 650px; margin: 0 auto 1.5rem auto; }
-
 
 /* --- Contact Page --- */
 .contact-layout {
@@ -864,7 +842,6 @@ html[data-theme="light"] .result-card-icon {
     text-align: center;
 }
 
-
 /* --- Legal & Security Pages --- */
 .legal-content h2.content-subtitle,
 .security-category h3.content-subtitle {
@@ -893,7 +870,6 @@ html[data-theme="light"] .result-card-icon {
     transition: color 0.3s ease;
 }
 .learn-more-link { font-size: 0.9em; }
-
 
 /* --- Footer --- */
 .site-footer {
@@ -954,9 +930,7 @@ html[data-theme="light"] .result-card-icon {
     transition: border-color 0.3s ease;
 }
 
-
 /* --- Responsive Adjustments (Mobile-First Approach) --- */
-
 @media (max-width: 767px) {
     .nav-menu-container { /* Default hidden state for mobile */
         display: none;
@@ -1038,7 +1012,6 @@ html[data-theme="light"] .result-card-icon {
     :root { --container-padding: 1rem; } 
 }
 
-
 /* --- Utility for screen readers only --- */
 .sr-only {
 	border: 0 !important;
@@ -1053,8 +1026,6 @@ html[data-theme="light"] .result-card-icon {
 	width: 1px !important;
 	white-space: nowrap !important; 
 }
-/* --- End Utility --- */
-
 
 /* --- Maintenance Page Specific --- */
 .maintenance-body {
@@ -1104,4 +1075,14 @@ html[data-theme="light"] .result-card-icon {
     100% { transform: rotate(360deg); }
 }
 /* --- End Maintenance Page Specific --- */
+
+/* Invert icon colors for dark mode */
+html[data-theme="dark"] .service-card-icon {
+    filter: brightness(0) invert(1);
+}
+
+html[data-theme="dark"] .result-card-icon {
+    filter: brightness(0) invert(1);
+}
+
 /* END OF FILE: css/style.css */
