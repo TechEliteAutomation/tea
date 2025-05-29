@@ -1,7 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /css/
-Disallow: /js/
-Disallow: /assets/icons/ # No need to crawl individual icons if they are just decorative
+Disallow:
 
 Sitemap: https://techeliteautomation.com/sitemap.xml
